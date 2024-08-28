@@ -12,6 +12,9 @@
     right: 0;
     background-color: #ffffff;
     color: #212121;
+    max-height: 200px; /* Limit height to prevent overflow */
+    overflow-y: auto; /* Enable scrolling for long lists */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a professional look */
 }
 
 .autocomplete-items div {
@@ -27,4 +30,33 @@
 .autocomplete-active {
     background-color: #1e90ff !important;
     color: #ffffff;
+}
+
+/* Enhanced search bar styling */
+#cityInput {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+#cityInput:focus {
+    border-color: #1e90ff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 8px rgba(30, 144, 255, 0.5);
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+nav {
+    position: relative;
+    z-index: 1000; /* Ensure the nav stays on top */
+}
+
+/* Scroll-to-top effect */
+html, body {
+    scroll-behavior: smooth;
 }
